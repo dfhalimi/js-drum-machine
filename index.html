@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Drum Machine</title>
+</head>
+<body>
+    <div class="container">
+        <div class="drum-machine">
+            <div class="buttons">
+                <div id="0" class="sound-btn" onclick="playSound(this.id)">Q</div>
+                <div id="1" class="sound-btn" onclick="playSound(this.id)">W</div>
+                <div id="2" class="sound-btn" onclick="playSound(this.id)">E</div>
+                <div id="3" class="sound-btn" onclick="playSound(this.id)">A</div>
+                <div id="4" class="sound-btn" onclick="playSound(this.id)">S</div>
+                <div id="5" class="sound-btn" onclick="playSound(this.id)">D</div>
+                <div id="6" class="sound-btn" onclick="playSound(this.id)">Y</div>
+                <div id="7" class="sound-btn" onclick="playSound(this.id)">X</div>
+                <div id="8" class="sound-btn" onclick="playSound(this.id)">C</div>
+            </div>
+            <div class="console">
+                <span class="switch-text">Power</span>
+                <input type="checkbox" id="power-switch" class="switch" onchange="powerToggle()" checked>
+                <div class="output">
+                    <span id="output"></span>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider" id="volume-slider" oninput="setVolume()">
+                <span class="switch-text">Bank</span>
+                <input type="checkbox" id="kit-switch" class="switch" onchange="switchKit()">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/script.js"></script>
+
+</html>
